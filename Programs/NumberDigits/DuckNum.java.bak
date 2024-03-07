@@ -1,0 +1,21 @@
+class DuckNum
+{
+	public static void main(String[] args) 
+	{
+		int num = 13;
+		while (num>0)
+		{
+			int last = num % 10 ;
+			if (last == 0 )
+			{
+				System.out.println("Given Number Contains 0");
+				break;
+			}
+			/*else
+			{
+				System.out.println("Given Number Doesnot Contains 0");
+			}*/
+			num/=10;
+		}
+	}
+}

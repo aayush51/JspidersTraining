@@ -1,0 +1,31 @@
+import java.util.Scanner;
+class FactorsSumProduct 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the Number :");
+		int num = sc.nextInt();
+		int sum = 0 ;
+		int product = 1 ;
+		for (int i = 1 ; i <= num ; i++ )
+		{
+			if (num%i==0)
+			{
+				sum += i ;
+				product *= i ;
+			}
+		}
+		if (sum==product)
+		{
+			System.out.println("Sum and Product of Factors of Number are same");
+			System.out.println("Sum : "+ sum);
+			System.out.println("Product : "+ product);
+		}
+		else
+		{
+			System.out.println("Sum and Product of Factors of Number are not same");			System.out.println("Sum : "+ sum);
+			System.out.println("Product : "+ product);
+		}
+	}
+}

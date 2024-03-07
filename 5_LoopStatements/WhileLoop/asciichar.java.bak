@@ -1,0 +1,12 @@
+class asciichar
+{
+	public static void main(String[]args)
+	{
+		char ch = (char)1;
+		while(ch<=127)
+		{
+			System.out.print(" " + ch + " ");
+			ch++;
+		}
+	}
+}

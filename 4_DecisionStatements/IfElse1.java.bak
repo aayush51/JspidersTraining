@@ -1,0 +1,19 @@
+import java.util.Scanner;
+class IfElse1
+{
+	public static void main(String[]args)
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a Character :");
+		char ch = sc.next().charAt(0);
+		if('a'< ch && ch < 'z' || 'A' < ch && 'Z' < ch)
+		{
+			System.out.println("Character is an Alphabet");
+		}
+		else
+		{
+			System.out.println("Character is not an Alphabet");
+		}
+		
+	}
+}

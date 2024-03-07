@@ -1,0 +1,21 @@
+class WideningByte 
+{
+	public static void main(String[] args) 
+	{
+		byte b = 122;
+		System.out.println(b);
+		short s = b;
+		System.out.println(s);
+		int i = b;
+		System.out.println(i);
+		long l = b;
+		System.out.println(l);
+		// char c = b ; // incompatible types: possible lossy conversion from byte to
+		// char
+		// System.out.println(c);
+		float f = b;
+		System.out.println(f);
+		double d = b;
+		System.out.println(d);
+	}
+}

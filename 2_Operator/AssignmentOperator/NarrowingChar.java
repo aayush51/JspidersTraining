@@ -1,0 +1,34 @@
+class NarrowingChar 
+{
+    public static void main(String[] args) 
+	{
+        byte b = 42;
+        char c1 = (char) b;
+        System.out.println(c1);
+
+        short s = 27786;
+        char c2 = (char) s;
+        System.out.println(c2);
+
+        int i = 1241324;
+        char c3 = (char) i;
+        System.out.println(c3);
+
+        long l = 654778l;
+        char c4 = (char) l;
+        System.out.println(c4);
+
+        char c = 't';
+        char c5 = (char) c;
+        System.out.println(c5);
+
+        float f = 346.87f;
+        char c6 = (char) f;
+        System.out.println(c6);
+
+        double d = 833.53;
+        char c7 = (char) d;
+        System.out.println(c7);
+
+    }
+}
