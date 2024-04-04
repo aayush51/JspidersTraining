@@ -2,18 +2,13 @@ class M1
 {
 	public static void main(String[] args) 
 	{
-		raju();
-		raju();
-		raju();
-		rani();
+		System.out.println("Hello World!");
+		test();
+		test();
+		test();
 	}
-	public static void raju() 
+	public static void test() 
 	{
-		System.out.println("Hi! I am Raju");
+		System.out.println("From Test!");
 	}
-	public static void rani() 
-	{
-		System.out.println("Get Lost!");
-	}
-	
 }
