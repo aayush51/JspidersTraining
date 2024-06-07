@@ -10,6 +10,14 @@ public class Mobile {
 	Mobile() {
 		System.out.println("from no arg constructor");
 	}
+	
+	// Constructor
+	Mobile(String brand, String model, String color, double price) {
+		this.brand = brand;
+		this.model = model;
+		this.color = color;
+		this.price = price;
+	}
 
 	public void displayMobile() {
 		System.out.println("Brand: " + brand);
