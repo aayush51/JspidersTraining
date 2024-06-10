@@ -1,0 +1,354 @@
+SQL> SELECT ENAME , SAL
+  2  FROM EMP;
+
+ENAME             SAL                                                                               
+---------- ----------                                                                               
+SMITH             800                                                                               
+ALLEN            1600                                                                               
+WARD             1250                                                                               
+JONES            2975                                                                               
+MARTIN           1250                                                                               
+BLAKE            2850                                                                               
+CLARK            2450                                                                               
+SCOTT            3000                                                                               
+KING             5000                                                                               
+TURNER           1500                                                                               
+ADAMS            1100                                                                               
+JAMES             950                                                                               
+FORD             3000                                                                               
+MILLER           1300                                                                               
+
+14 rows selected.
+
+SQL> SELECT ENAME , SAL , SAL+100
+  2  FROM EMP ;
+
+ENAME             SAL    SAL+100                                                                    
+---------- ---------- ----------                                                                    
+SMITH             800        900                                                                    
+ALLEN            1600       1700                                                                    
+WARD             1250       1350                                                                    
+JONES            2975       3075                                                                    
+MARTIN           1250       1350                                                                    
+BLAKE            2850       2950                                                                    
+CLARK            2450       2550                                                                    
+SCOTT            3000       3100                                                                    
+KING             5000       5100                                                                    
+TURNER           1500       1600                                                                    
+ADAMS            1100       1200                                                                    
+JAMES             950       1050                                                                    
+FORD             3000       3100                                                                    
+MILLER           1300       1400                                                                    
+
+14 rows selected.
+
+SQL> SELECT ENAME , SAL , SAL+250
+  2  FROM EMP ;
+
+ENAME             SAL    SAL+250                                                                    
+---------- ---------- ----------                                                                    
+SMITH             800       1050                                                                    
+ALLEN            1600       1850                                                                    
+WARD             1250       1500                                                                    
+JONES            2975       3225                                                                    
+MARTIN           1250       1500                                                                    
+BLAKE            2850       3100                                                                    
+CLARK            2450       2700                                                                    
+SCOTT            3000       3250                                                                    
+KING             5000       5250                                                                    
+TURNER           1500       1750                                                                    
+ADAMS            1100       1350                                                                    
+JAMES             950       1200                                                                    
+FORD             3000       3250                                                                    
+MILLER           1300       1550                                                                    
+
+14 rows selected.
+
+SQL> SELECT ENAME , SAL , SAL-100
+  2  FROM EMP ;
+
+ENAME             SAL    SAL-100                                                                    
+---------- ---------- ----------                                                                    
+SMITH             800        700                                                                    
+ALLEN            1600       1500                                                                    
+WARD             1250       1150                                                                    
+JONES            2975       2875                                                                    
+MARTIN           1250       1150                                                                    
+BLAKE            2850       2750                                                                    
+CLARK            2450       2350                                                                    
+SCOTT            3000       2900                                                                    
+KING             5000       4900                                                                    
+TURNER           1500       1400                                                                    
+ADAMS            1100       1000                                                                    
+JAMES             950        850                                                                    
+FORD             3000       2900                                                                    
+MILLER           1300       1200                                                                    
+
+14 rows selected.
+
+SQL> SELECT ENAME , SAL , SAL-500
+  2  FROM EMP;
+
+ENAME             SAL    SAL-500                                                                    
+---------- ---------- ----------                                                                    
+SMITH             800        300                                                                    
+ALLEN            1600       1100                                                                    
+WARD             1250        750                                                                    
+JONES            2975       2475                                                                    
+MARTIN           1250        750                                                                    
+BLAKE            2850       2350                                                                    
+CLARK            2450       1950                                                                    
+SCOTT            3000       2500                                                                    
+KING             5000       4500                                                                    
+TURNER           1500       1000                                                                    
+ADAMS            1100        600                                                                    
+JAMES             950        450                                                                    
+FORD             3000       2500                                                                    
+MILLER           1300        800                                                                    
+
+14 rows selected.
+
+SQL> SELECT ENAME , SAL , SAL+SAL*25/100
+  2  FROM EMP;
+
+ENAME             SAL SAL+SAL*25/100                                                                
+---------- ---------- --------------                                                                
+SMITH             800           1000                                                                
+ALLEN            1600           2000                                                                
+WARD             1250         1562.5                                                                
+JONES            2975        3718.75                                                                
+MARTIN           1250         1562.5                                                                
+BLAKE            2850         3562.5                                                                
+CLARK            2450         3062.5                                                                
+SCOTT            3000           3750                                                                
+KING             5000           6250                                                                
+TURNER           1500           1875                                                                
+ADAMS            1100           1375                                                                
+JAMES             950         1187.5                                                                
+FORD             3000           3750                                                                
+MILLER           1300           1625                                                                
+
+14 rows selected.
+
+SQL> SELECT ENAME , SAL , SAL+SAL*33/100
+  2  FROM EMP;
+
+ENAME             SAL SAL+SAL*33/100                                                                
+---------- ---------- --------------                                                                
+SMITH             800           1064                                                                
+ALLEN            1600           2128                                                                
+WARD             1250         1662.5                                                                
+JONES            2975        3956.75                                                                
+MARTIN           1250         1662.5                                                                
+BLAKE            2850         3790.5                                                                
+CLARK            2450         3258.5                                                                
+SCOTT            3000           3990                                                                
+KING             5000           6650                                                                
+TURNER           1500           1995                                                                
+ADAMS            1100           1463                                                                
+JAMES             950         1263.5                                                                
+FORD             3000           3990                                                                
+MILLER           1300           1729                                                                
+
+14 rows selected.
+
+SQL> SELECT ENAME , SAL , SAL+SAL*25/100
+  2  FROM EMP;
+
+ENAME             SAL SAL+SAL*25/100                                                                
+---------- ---------- --------------                                                                
+SMITH             800           1000                                                                
+ALLEN            1600           2000                                                                
+WARD             1250         1562.5                                                                
+JONES            2975        3718.75                                                                
+MARTIN           1250         1562.5                                                                
+BLAKE            2850         3562.5                                                                
+CLARK            2450         3062.5                                                                
+SCOTT            3000           3750                                                                
+KING             5000           6250                                                                
+TURNER           1500           1875                                                                
+ADAMS            1100           1375                                                                
+JAMES             950         1187.5                                                                
+FORD             3000           3750                                                                
+MILLER           1300           1625                                                                
+
+14 rows selected.
+
+SQL> SELECT ENAME , SAL , SAL+SAL*36.5/100
+  2  FROM EMP;
+
+ENAME             SAL SAL+SAL*36.5/100                                                              
+---------- ---------- ----------------                                                              
+SMITH             800             1092                                                              
+ALLEN            1600             2184                                                              
+WARD             1250          1706.25                                                              
+JONES            2975         4060.875                                                              
+MARTIN           1250          1706.25                                                              
+BLAKE            2850          3890.25                                                              
+CLARK            2450          3344.25                                                              
+SCOTT            3000             4095                                                              
+KING             5000             6825                                                              
+TURNER           1500           2047.5                                                              
+ADAMS            1100           1501.5                                                              
+JAMES             950          1296.75                                                              
+FORD             3000             4095                                                              
+MILLER           1300           1774.5                                                              
+
+14 rows selected.
+
+SQL> SELECT ENAME , SAL , SAL*6
+  2  FROM EMP;
+
+ENAME             SAL      SAL*6                                                                    
+---------- ---------- ----------                                                                    
+SMITH             800       4800                                                                    
+ALLEN            1600       9600                                                                    
+WARD             1250       7500                                                                    
+JONES            2975      17850                                                                    
+MARTIN           1250       7500                                                                    
+BLAKE            2850      17100                                                                    
+CLARK            2450      14700                                                                    
+SCOTT            3000      18000                                                                    
+KING             5000      30000                                                                    
+TURNER           1500       9000                                                                    
+ADAMS            1100       6600                                                                    
+JAMES             950       5700                                                                    
+FORD             3000      18000                                                                    
+MILLER           1300       7800                                                                    
+
+14 rows selected.
+
+SQL> SELECT ENAME , SAL , SAL*6 , SAL*6+500
+  2  FROM EMP;
+
+ENAME             SAL      SAL*6  SAL*6+500                                                         
+---------- ---------- ---------- ----------                                                         
+SMITH             800       4800       5300                                                         
+ALLEN            1600       9600      10100                                                         
+WARD             1250       7500       8000                                                         
+JONES            2975      17850      18350                                                         
+MARTIN           1250       7500       8000                                                         
+BLAKE            2850      17100      17600                                                         
+CLARK            2450      14700      15200                                                         
+SCOTT            3000      18000      18500                                                         
+KING             5000      30000      30500                                                         
+TURNER           1500       9000       9500                                                         
+ADAMS            1100       6600       7100                                                         
+JAMES             950       5700       6200                                                         
+FORD             3000      18000      18500                                                         
+MILLER           1300       7800       8300                                                         
+
+14 rows selected.
+
+SQL> SELECT ENAME , SAL , SAL*6 , SAL*6-1000
+  2  FROM EMP;
+
+ENAME             SAL      SAL*6 SAL*6-1000                                                         
+---------- ---------- ---------- ----------                                                         
+SMITH             800       4800       3800                                                         
+ALLEN            1600       9600       8600                                                         
+WARD             1250       7500       6500                                                         
+JONES            2975      17850      16850                                                         
+MARTIN           1250       7500       6500                                                         
+BLAKE            2850      17100      16100                                                         
+CLARK            2450      14700      13700                                                         
+SCOTT            3000      18000      17000                                                         
+KING             5000      30000      29000                                                         
+TURNER           1500       9000       8000                                                         
+ADAMS            1100       6600       5600                                                         
+JAMES             950       5700       4700                                                         
+FORD             3000      18000      17000                                                         
+MILLER           1300       7800       6800                                                         
+
+14 rows selected.
+
+SQL> SELECT ENAME , SAL , SAL*6 , SAL*6+SAL*6*25/100
+  2  FROM EMP;
+
+ENAME             SAL      SAL*6 SAL*6+SAL*6*25/100                                                 
+---------- ---------- ---------- ------------------                                                 
+SMITH             800       4800               6000                                                 
+ALLEN            1600       9600              12000                                                 
+WARD             1250       7500               9375                                                 
+JONES            2975      17850            22312.5                                                 
+MARTIN           1250       7500               9375                                                 
+BLAKE            2850      17100              21375                                                 
+CLARK            2450      14700              18375                                                 
+SCOTT            3000      18000              22500                                                 
+KING             5000      30000              37500                                                 
+TURNER           1500       9000              11250                                                 
+ADAMS            1100       6600               8250                                                 
+JAMES             950       5700               7125                                                 
+FORD             3000      18000              22500                                                 
+MILLER           1300       7800               9750                                                 
+
+14 rows selected.
+
+SQL> SELECT ENAME , SAL , SAL*6 , SAL*6-SAL*6*32/100
+  2  FROM EMP;
+
+ENAME             SAL      SAL*6 SAL*6-SAL*6*32/100                                                 
+---------- ---------- ---------- ------------------                                                 
+SMITH             800       4800               3264                                                 
+ALLEN            1600       9600               6528                                                 
+WARD             1250       7500               5100                                                 
+JONES            2975      17850              12138                                                 
+MARTIN           1250       7500               5100                                                 
+BLAKE            2850      17100              11628                                                 
+CLARK            2450      14700               9996                                                 
+SCOTT            3000      18000              12240                                                 
+KING             5000      30000              20400                                                 
+TURNER           1500       9000               6120                                                 
+ADAMS            1100       6600               4488                                                 
+JAMES             950       5700               3876                                                 
+FORD             3000      18000              12240                                                 
+MILLER           1300       7800               5304                                                 
+
+14 rows selected.
+
+SQL> SELECT ENAME , SAL , SAL*12
+  2  FROM EMP;
+
+ENAME             SAL     SAL*12                                                                    
+---------- ---------- ----------                                                                    
+SMITH             800       9600                                                                    
+ALLEN            1600      19200                                                                    
+WARD             1250      15000                                                                    
+JONES            2975      35700                                                                    
+MARTIN           1250      15000                                                                    
+BLAKE            2850      34200                                                                    
+CLARK            2450      29400                                                                    
+SCOTT            3000      36000                                                                    
+KING             5000      60000                                                                    
+TURNER           1500      18000                                                                    
+ADAMS            1100      13200                                                                    
+JAMES             950      11400                                                                    
+FORD             3000      36000                                                                    
+MILLER           1300      15600                                                                    
+
+14 rows selected.
+
+SQL> 
+SQL> SELECT ENAME , SAL , SAL*12 , SAL*12+700 , SAL*12-500 , SAL*12+SAL*12*23/100 , SAL*12-SAL*12*15/100
+  2  FROM EMP;
+
+ENAME             SAL     SAL*12 SAL*12+700 SAL*12-500 SAL*12+SAL*12*23/100 SAL*12-SAL*12*15/100    
+---------- ---------- ---------- ---------- ---------- -------------------- --------------------    
+SMITH             800       9600      10300       9100                11808                 8160    
+ALLEN            1600      19200      19900      18700                23616                16320    
+WARD             1250      15000      15700      14500                18450                12750    
+JONES            2975      35700      36400      35200                43911                30345    
+MARTIN           1250      15000      15700      14500                18450                12750    
+BLAKE            2850      34200      34900      33700                42066                29070    
+CLARK            2450      29400      30100      28900                36162                24990    
+SCOTT            3000      36000      36700      35500                44280                30600    
+KING             5000      60000      60700      59500                73800                51000    
+TURNER           1500      18000      18700      17500                22140                15300    
+ADAMS            1100      13200      13900      12700                16236                11220    
+JAMES             950      11400      12100      10900                14022                 9690    
+FORD             3000      36000      36700      35500                44280                30600    
+MILLER           1300      15600      16300      15100                19188                13260    
+
+14 rows selected.
+
+SQL> SPOOL OFF
