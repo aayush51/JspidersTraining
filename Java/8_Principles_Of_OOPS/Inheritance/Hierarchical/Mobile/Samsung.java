@@ -11,6 +11,7 @@ public class Samsung extends Mobile {
 
 	Samsung(int batterymAh, int memoryGB, int storageGB, int cameraMP, int priceRs, String Model, Boolean KnoxSecurity,
 			Boolean SamsungPay) {
+//		System.out.println(batterymAh);
 		this.batterymAh = batterymAh;
 		this.memoryGB = memoryGB;
 		this.storageGB = storageGB;

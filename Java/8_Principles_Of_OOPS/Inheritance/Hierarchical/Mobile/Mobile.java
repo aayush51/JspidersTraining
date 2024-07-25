@@ -12,6 +12,8 @@ public class Mobile {
 	}
 	
 	Mobile(int batterymAh, int memoryGB, int storageGB, int cameraMP, int priceRs) {
+//		System.out.println(batterymAh);
+		
 		this.batterymAh = batterymAh;
 		this.memoryGB = memoryGB;
 		this.storageGB = storageGB;
@@ -25,5 +27,7 @@ public class Mobile {
 		System.out.println("Storage: " + storageGB + " GB");
 		System.out.println("Camera: " + cameraMP + " MP");
 		System.out.println("Price: Rs." + priceRs);
+		
+		System.out.println(this);
 	}
 }
