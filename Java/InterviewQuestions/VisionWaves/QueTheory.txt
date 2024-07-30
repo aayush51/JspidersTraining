@@ -7,14 +7,14 @@ Q1] What is class & object
 	<4> Attributes/Details/Features/Properties of object are represented by non static 
 		variables of class
 	<5> Action/Behaviour are represented by non static methods
-
+___________________________________________________________________________________________________
 Q2] What is constructor and what is real use of constructor 
 	<1> Constructor is special member of class whose name is same as class_name
 	<2> It can only be used along with new operator
 	<3> Constructor loads all non static members of class into object
 	<4> Every class must have constructor , if programmer fails to add compiler add 
 		default constructor
-
+___________________________________________________________________________________________________
 Q3] What constructor overloading and constructor chaining
 	<1> Class having more than one constructor is known as constructor overloading
 	<2> For constructor overloading constructor must change either in  its type or no of 
@@ -25,7 +25,7 @@ Q3] What constructor overloading and constructor chaining
 	<5> Constructor chaining can be done in two ways with 
 		this() call - Constructor chaining within same class
 		super() call - Constructor chaining within different classes with IS A relationship
- 
+___________________________________________________________________________________________________
 Q4] In how many ways we can create object
 	<1> Object can be created in 5 ways
 		1) with new keyword
@@ -33,13 +33,14 @@ Q4] In how many ways we can create object
 		3) with clone() method
 		4) with serialization and deserialization
 		5) with newInstance()
-
+___________________________________________________________________________________________________
 Q5] What are members of class
 	<1> variables (static & non static)
 	<2> methods (static & non static)
 	<3> constructor
 	<4> nested classes (static class & private class)
 	<5> Initializers (static block & non static block)
+___________________________________________________________________________________________________
 
 Q6] What are differences between static and non-static
 	________________________________________________________________________________________
@@ -53,13 +54,17 @@ Q6] What are differences between static and non-static
 							is loaded in memory				exists
 	________________________________________________________________________________________
 	
+	
 Q7] Can we overload main method
 	Yes 
-
-Q8] Can we declare constructor as private , If yes then how can we perform instatiation for private constructor
-	
-	
+___________________________________________________________________________________________________
+Q8] Can we declare constructor as private , If yes then how can we perform instantiation for 
+	private constructor
+	Yes we can declare a private constructor but we can not perform instantiation directly 
+	But we can perform instantiation using getter/helper method.
+___________________________________________________________________________________________________
 Q9] Can we declare class as private 
+
 
 Q10] Can we make class as static
 
