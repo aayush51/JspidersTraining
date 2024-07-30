@@ -1,0 +1,31 @@
+Q1] Reverse array and store in new array / different array
+
+Q2] Store factors of numbers in separate array
+
+Q3] Find sum and product of even indices in array
+
+Q4] Reverse each word in sentence
+
+Q5] Count of vowels and consonants in array and string
+
+Q6] Count of repeated element in array (Repeated element taken from user)
+
+Q7] Store even and odd numbers from array in two different arrays(even array and odd array)
+
+Q8] Sort array element in ascending and descending without built in methods
+
+Q9] Find second largest element in array 
+
+Q10] Convert String into Character array and Store its respective ascii values in different array
+
+Q11] Duplicate elements in array
+
+Q12] Remove element from array
+
+Q13] Convert 1st letter into capital and rest in lower case
+
+Q14] Check if string is palindrome or not
+
+Q15] Remove a element from String
+
+Q16] Manipulate Given String aBcDeFgH.... 
