@@ -1,6 +1,9 @@
 package VisionWaves;
 
-public class Q7 {
+public class Q07 {
+	
+//	Q7] Can we overload main method
+	
 	public static void main(String[] args) {
 		System.out.println("Starting Main(String[] args)");
 		main();

@@ -8,6 +8,7 @@ Q1] What is class & object
 		variables of class
 	<5> Action/Behaviour are represented by non static methods
 ___________________________________________________________________________________________________
+
 Q2] What is constructor and what is real use of constructor 
 	<1> Constructor is special member of class whose name is same as class_name
 	<2> It can only be used along with new operator
@@ -15,6 +16,7 @@ Q2] What is constructor and what is real use of constructor
 	<4> Every class must have constructor , if programmer fails to add compiler add 
 		default constructor
 ___________________________________________________________________________________________________
+
 Q3] What constructor overloading and constructor chaining
 	<1> Class having more than one constructor is known as constructor overloading
 	<2> For constructor overloading constructor must change either in  its type or no of 
@@ -26,6 +28,7 @@ Q3] What constructor overloading and constructor chaining
 		this() call - Constructor chaining within same class
 		super() call - Constructor chaining within different classes with IS A relationship
 ___________________________________________________________________________________________________
+
 Q4] In how many ways we can create object
 	<1> Object can be created in 5 ways
 		1) with new keyword
@@ -34,6 +37,7 @@ Q4] In how many ways we can create object
 		4) with serialization and deserialization
 		5) with newInstance()
 ___________________________________________________________________________________________________
+
 Q5] What are members of class
 	<1> variables (static & non static)
 	<2> methods (static & non static)
@@ -58,37 +62,109 @@ Q6] What are differences between static and non-static
 Q7] Can we overload main method
 	Yes 
 ___________________________________________________________________________________________________
+
 Q8] Can we declare constructor as private , If yes then how can we perform instantiation for 
 	private constructor
 	Yes we can declare a private constructor but we can not perform instantiation directly 
 	But we can perform instantiation using getter/helper method.
 ___________________________________________________________________________________________________
+
 Q9] Can we declare class as private 
+	No , class can be public , abstract & final only
+	but inner class/nested classes can be declared as private
+	
+___________________________________________________________________________________________________
 
 
 Q10] Can we make class as static
+	No , class can be public , abstract & final only
+	but inner class/nested classes can be declared as static
+	
+___________________________________________________________________________________________________
+
 
 Q11] Can we call methods in multi-line block (Static Block)
+	Yes , we can call methods in static initializer / static block / multi-line block
+	
+___________________________________________________________________________________________________
+
+
 
 Q12] Can we have multiple class in one java file , if yes what should be filename
+	Yes , we can have multiple classes in one java file , but filename of java file should be
+	className which has main method where execution will begin and there should be single public 
+	class which has main method
+	
+___________________________________________________________________________________________________
+
+
 
 Q13] What is inheritance and main purpose of inheritance
+	<1> Inheritance is process of one class acquiring properties and behaviors of another class
+	<2> We achieve Inheritance using extends and implements keywords
+	<3> Inheritance used to achieve Is A relationship (Generalization & Specialization)
+	<4> 5 levels of inheritance
+		1] Single level inheritance
+		2] Multi-Level inheritance
+		3] Hierarchical inheritance
+		4] Multiple inheritance
+		5] Hybrid inheritance
+	<5> Main Purpose of Inheritance - Code Reusability
+	
+___________________________________________________________________________________________________
+
 
 Q14] Can we override main method in java 
+	No, main method is static method because of why we can not override main method but if we 
+	try to method shadowing happens and parent/super class main method will execute 
+	
+___________________________________________________________________________________________________
+
 
 Q15] Can we override private methods in java
+	No, Because scope of private methods , Private methods not visible outside class
+	
+___________________________________________________________________________________________________
+
 
 Q16] Can we access static variable by object creation , if yes what is use 
+	Yes , we can access static variables by object creation but it will not create copies of
+	variable , same variable is shared with all objects/instances 
+	
+___________________________________________________________________________________________________
+
 
 Q17] What is method overriding ? explain in terms of compile time and runtime
+	<1> Method Overriding is mechanism of giving new implementation to super class method 
+		from subclass 
+	<2> Method Overriding comes under runtime polymorphism
+	<3> Method Overriding can be done on non-static methods only
+	<4> If we try to Override static method method shadowing happens which is compile time
+		polymorphism , where at compile time binding of method is done with super class method
+		instead of subclass method (which happens in method overriding)
+	
+___________________________________________________________________________________________________
+
 
 Q18] Can we declare constructors in abstract class
+	
+___________________________________________________________________________________________________
+
 
 Q19] Can we have static methods in abstract class
+	
+___________________________________________________________________________________________________
+
 
 Q20] Can we have main method in abstract class
+	
+___________________________________________________________________________________________________
+
 
 Q21] Can we create object of interface / perform instantiation interface
+	
+___________________________________________________________________________________________________
+
 
 Q22] In interface what are members that can be declared
 
