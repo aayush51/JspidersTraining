@@ -29,3 +29,18 @@ Q14] Check if string is palindrome or not
 Q15] Remove a element from String
 
 Q16] Manipulate Given String aBcDeFgH.... 
+
+Q17] By using List data-structure perform following operations:
+	 1) Add 5 student names
+	 2) Display the students
+	 3) Remove the student
+	 4) Change student name
+	 5) Search the student		
+	 Use OOPS principals
+	 
+Q18] Take 2 Input dynamically and show the implementation of compareTo() method
+
+Q19] How to use compareTo() method for primitive types. Explain with example
+
+Q20] Create a class to store n number of countries and sort class based on countries 
+	 in alphabetical order

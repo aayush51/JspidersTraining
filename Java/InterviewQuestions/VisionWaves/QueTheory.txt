@@ -147,64 +147,752 @@ ________________________________________________________________________________
 
 
 Q18] Can we declare constructors in abstract class
+	Yes , we can declare constructors in abstract class 
 	
 ___________________________________________________________________________________________________
 
 
 Q19] Can we have static methods in abstract class
+	Yes , we can have static methods in abstract class
 	
 ___________________________________________________________________________________________________
 
 
 Q20] Can we have main method in abstract class
+	Yes , we can have main method in abstract class
 	
 ___________________________________________________________________________________________________
 
 
 Q21] Can we create object of interface / perform instantiation interface
-	
+	No , Interface are used to achieve pure abstraction We can not have any constructor in 
+	interface So we can not perform instantiation of interface
+
 ___________________________________________________________________________________________________
 
 
 Q22] In interface what are members that can be declared
+	<1> public non static abstract methods (By default non static methods are public & abstract)
+	<2> public static final variables (All variables are by default public static final)
+	<3> public static methods (since JDK 1.8)
+	<4> default non static methods
+
+___________________________________________________________________________________________________
+
 
 Q23] What is multiple inheritance in interface
+	1] When we extends class to two interfaces we can achieve multiple inheritance
+	2] As in interface non-static methods are abstract there is no ambiguity
+	3] Static methods can not be inherited
+	4] There is no constructor in interface So no confusion in super() call stmt
+	5] Static Variables of interface are inherited in subclass only if names are different
+	6] If Static Variables names are same , We get ambiguous error So better to call it with 
+		Interface_Name
+	
+
+___________________________________________________________________________________________________
+
 
 Q24] What are differences between exception and error
+	
+	 _______________________________________________________________________________________
+	 Feature		Exception							Error
+	 _______________________________________________________________________________________
+	 Definition		1) Exception is problem occur		1) Errors are problem that occur at 
+	 				during execution of program/s/w		runtime due to system restrictions
+	 				due to abnormal situation
+	 Handling		2) Exceptions can be handled by		2) Error can not caught or handled
+	 				try-catch blocks
+	 Example		3) IOException						3) StackOverflowError
+	 					SQLException						VirtualMachineError
+	 					ClassNotFoundException				OutOfMemoryError
+	 					RuntimeException
+	 					ArithmaticException
+	 					NullPointerException
+	 					NumberFormatException
+	 					IndexOutOfBoundException
+	 Cause			4) Caused by program errors or		4) Caused by issues like System 
+	 				bad data							Failures
+	 					
+
+___________________________________________________________________________________________________
+
 
 Q25] What is null pointer exception
+	When we try to invoke non static member with object reference variable which is stored with
+	null reference we get null pointer exception 
+	Ex-Lazy instantiation
+
+___________________________________________________________________________________________________
+
 
 Q26] What is interrupted exception
+	When we try to interrupt normal execution of program like waiting thread , sleeping thread or 
+	pausing thread , InterruptedException occur
+
+___________________________________________________________________________________________________
+
 
 Q27] What is difference between throw and throws keyword
+	
+	 ____________________________________________________________________________________________
+	 Feature		throw							throws
+	 ____________________________________________________________________________________________
+	 Purpose	1] Used to explicitly throw an 		1] Used in method signatures to declare that 
+	 			exception.							a method can throw exceptions.
+	 Usage		2] Within the method body.			2] In the method declaration.
+	 Syntax		3] throw new 						3] public void methodName() throws
+	 			ExceptionType("Error message");	 	ExceptionType { }
+	 Handling	4] Transfers control to the nearest 4] Informs the caller of the method that
+	 			catch block.						it must handle the exception.
+	 Example	5] throw new 						5] public void myMethod() throws
+	 			IllegalArgumentException			IOException { }
+	 			("Invalid input");	  
+	 Types 		6] Can throw both checked and 		6] Can declare both checked and unchecked 
+	 of 		unchecked exceptions.				exceptions.
+	 Exceptions		
+	 Execution	7] Immediately causes an exception 	7] No immediate action; only a declaration.
+	 			to be thrown.	
+	 ___________________________________________________________________________________________
+
+
+___________________________________________________________________________________________________
+
 
 Q28] What is difference between final keyword and finally block
+	
+	 ____________________________________________________________________________________________
+	 Feature		final							finally
+	 ____________________________________________________________________________________________
+	 Purpose	1] To declare constants, prevent 	1] To execute a block of code regardless of 
+	 			inheritance, and prevent method 	whether an exception is thrown or not.
+	 			overriding.	
+	 Usage		2] Applied to variables, methods, 	2] Associated with a try-catch block.
+	 			and classes.	
+	 Syntax		3] final int MAX = 10;				3] try { } finally { }
+	 Context	4] Used with variables, methods, 	4] Used with exception handling blocks.
+	 			and classes.			
+	 Effect		5] Makes variables immutable, 		5] Ensures that code runs after a 
+	 			prevents method overriding, and 	try-catch block, whether an exception 
+	 			prevents class inheritance.			occurs or not.
+	 Example	6] public final class MyClass { }	6] try { } finally { System.out.println("Done"); }
+	
+
+___________________________________________________________________________________________________
+
 
 Q29] What is difference between final keyword and finalize() method
+	
+	 ____________________________________________________________________________________________
+	 Feature	final	finalize()
+	 Purpose	To define constants, prevent inheritance, and method overriding.	To perform cleanup operations before an object is removed by garbage collection.
+	 Usage	Applied to variables, methods, and classes.	A method defined in the Object class, overridden in a subclass.
+	 Syntax	final int MAX = 10;	protected void finalize() throws Throwable { }
+	 Context	Used in class design and constants.	Used in resource cleanup and garbage collection.
+	 Effect	Prevents modification (variables), extension (classes), and overriding (methods).	Provides a way to clean up resources before an object is reclaimed by the garbage collector.
+	 Invocation	Determined at compile time.	Called by the garbage collector before an object is deleted.
+	 Example	public final class MyClass { }	protected void finalize() { System.out.println("Cleaning up..."); }
+
+___________________________________________________________________________________________________
+
 
 Q30] What is purpose of equals() method
+	 The equals() method in the Object class is used to compare two objects for equality. Its 
+	 primary purpose is to provide a way to determine if two references point to objects that are 
+	 considered equal based on some criteria. By default, equals() compares memory addresses 
+	 (i.e., it checks if the two references point to the same object).
+	 
+	 Default Implementation:
+	 The default implementation of equals() in the Object class checks for reference equality, 
+	 which means it returns true only if both references point to the same object in memory.
+	 
+	 Overriding equals():
+	 It is often overridden in user-defined classes to provide a meaningful equality check based 
+	 on the contents or attributes of the objects rather than their memory addresses. This is 
+	 essential for comparing objects based on their logical equivalence.
+	 
+
+___________________________________________________________________________________________________
+
 
 Q31] What are types of interfaces
 
+	Standard Interfaces:
+	Definition: Basic interfaces that are used to define a contract that implementing classes must 
+	follow.
+	Example: Runnable, Comparable, Cloneable
+	
+	Functional Interfaces:
+	Definition: Interfaces that have exactly one abstract method. They are intended to be used with 
+	lambda expressions or method references.
+	Annotation: Marked with the @FunctionalInterface annotation, though this is optional.
+	Example: Runnable, Callable, Predicate<T>, Function<T, R>, Consumer<T>, Supplier<T>
+	
+	Marker Interfaces:
+	Definition: Interfaces that do not have any methods or fields. They are used to indicate metadata 
+	or provide a special behavior.
+	Example: Serializable, Cloneable, Remote
+	
+	Tagged Interfaces:
+	Definition: Similar to marker interfaces but are used in a more nuanced way to mark classes with 
+	a certain behavior or capability.
+	Example: EventListener (used in event handling)
+	
+	Default Interfaces:
+	Definition: Introduced in Java 8, these interfaces can have methods with default implementations. 
+	They allow you to add new methods to interfaces without breaking existing implementations.
+	Keyword: default
+	
+	Static Interfaces:
+	Definition: Interfaces can have static methods which are not inherited by implementing classes. 
+	These methods can be called on the interface itself.
+	Keyword: static
+	
+	Sealed Interfaces:
+	Definition: Introduced in Java 17, sealed interfaces restrict which classes or interfaces can 
+	implement them. This is used to control and limit the class hierarchy.
+	Keyword: sealed, permits
+	Example:
+	sealed interface Shape permits Circle, Rectangle {}
+	final class Circle implements Shape {}
+	final class Rectangle implements Shape {}
+
+___________________________________________________________________________________________________
+
+
 Q32] Why we use functional interface
+	
+	Functional interfaces in Java are used primarily for functional programming, allowing you to 
+	pass behavior as arguments, work with lambda expressions, and use method references
+	
+	Support for Lambda Expressions:
+
+Functional interfaces enable the use of lambda expressions, which provide a concise way to represent a single method interface using an anonymous function. This can make code more readable and expressive.
+Example:
+java
+Copy code
+@FunctionalInterface
+interface Operation {
+    int apply(int a, int b);
+}
+
+Operation add = (a, b) -> a + b;
+System.out.println(add.apply(5, 3)); // Output: 8
+Encapsulation of Behavior:
+
+They allow you to encapsulate a behavior (function) in an object, which can be passed around, stored, or executed. This is useful for passing code as parameters and creating flexible APIs.
+Method References:
+
+Functional interfaces facilitate the use of method references, which are a shorthand notation for calling methods via lambda expressions.
+Example:
+java
+Copy code
+@FunctionalInterface
+interface Printer {
+    void print(String s);
+}
+
+Printer printer = System.out::println;
+printer.print("Hello, world!"); // Output: Hello, world!
+Functional Programming Paradigm:
+
+They are a key part of Java’s support for functional programming, which emphasizes the use of functions as first-class citizens. This can lead to more declarative and concise code.
+Use with Streams API:
+
+Functional interfaces are heavily used in Java’s Streams API for operations like filtering, mapping, and reducing collections.
+Example:
+java
+Copy code
+List<String> names = Arrays.asList("Alice", "Bob", "Charlie");
+names.stream()
+     .filter(name -> name.startsWith("A"))
+     .forEach(System.out::println); // Output: Alice
+Code Simplification:
+
+They simplify code by removing boilerplate code associated with anonymous inner classes. With functional interfaces, you can write more concise and readable code.
+
+___________________________________________________________________________________________________
+
 
 Q33] In how many ways we can create threads (multithreading,thread class,runable interface)
 
+	Extending the Thread Class:
+	Description: Create a new class that extends the Thread class and overrides its run() method.
+
+	Implementing the Runnable Interface:
+	Description: Create a class that implements the Runnable interface and its run() method. Then 
+	pass an instance of this class to a Thread object.
+	
+	Using Lambda Expressions (Java 8+):
+	Description: For functional interfaces like Runnable, you can use lambda expressions to 
+	simplify the code.
+	
+	Using ExecutorService:
+	Description: Create and manage threads using the ExecutorService framework, which provides 
+	thread pooling and other advanced features.
+	Using Callable and Future:
+	Description: The Callable interface allows tasks to return results and handle exceptions. Use 
+	it with ExecutorService to manage concurrent tasks and retrieve results.
+	Using ForkJoinPool:
+	Description: The ForkJoinPool framework is designed for parallel processing of tasks that can be 
+	divided into smaller subtasks.
+___________________________________________________________________________________________________
+
+
 Q34] What is synchronization , in how many ways we can perform synchronization 
 
+	Synchronization in Java is a mechanism to control access to shared resources by multiple 
+	threads, ensuring that only one thread can access a resource at a time. This is crucial 
+	for preventing data inconsistency and ensuring thread safety in concurrent programming.
+	
+	Synchronized Methods: Lock the entire method.
+	Synchronized Blocks: Lock specific blocks of code.
+	Locks: Use explicit lock objects for advanced control.
+	Concurrent Collections: Use thread-safe collections.
+	Atomic Variables: Perform atomic operations on variables.
+	volatile Keyword: Ensure visibility of variable changes.
+	
+Key Concepts of Synchronization:
+Mutual Exclusion: Ensures that only one thread can execute a block of code or access a resource 
+at a time.
+Visibility: Guarantees that changes made by one thread to shared variables are visible to other 
+threads.
+
+Ways to Perform Synchronization:
+Synchronized Methods:
+Description: Use the synchronized keyword to lock the method so that only one thread can execute 
+it at a time.
+public synchronized void synchronizedMethod() {
+    // Critical section code
+}
+Synchronized Blocks:
+Description: Use the synchronized keyword within a block of code to lock a specific object. This provides more granular control compared to synchronizing the entire method.
+public void someMethod() {
+    synchronized (this) {
+        // Critical section code
+    }
+}
+Locks (from java.util.concurrent.locks):
+Description: Use explicit lock objects from the java.util.concurrent.locks package, such as ReentrantLock. These provide more advanced features compared to synchronized blocks and methods.
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+public class MyClass {
+    private final Lock lock = new ReentrantLock();
+
+    public void someMethod() {
+        lock.lock();
+        try {
+            // Critical section code
+        } finally {
+            lock.unlock();
+        }
+    }
+}
+Concurrent Collections:
+Description: Use thread-safe collections provided by the java.util.concurrent package, such as ConcurrentHashMap, CopyOnWriteArrayList, and BlockingQueue. These collections are designed to handle concurrent access internally.
+import java.util.concurrent.ConcurrentHashMap;
+public class MyClass {
+    private final ConcurrentHashMap<String, String> map = new ConcurrentHashMap<>();
+
+    public void addElement(String key, String value) {
+        map.put(key, value);
+    }
+}
+Atomic Variables:
+Description: Use atomic classes from the java.util.concurrent.atomic package, such as AtomicInteger, AtomicLong, and AtomicReference. These classes provide thread-safe operations on single variables.
+import java.util.concurrent.atomic.AtomicInteger;
+public class MyClass {
+    private final AtomicInteger counter = new AtomicInteger();
+
+    public void increment() {
+        counter.incrementAndGet();
+    }
+}
+volatile Keyword:
+Description: Use the volatile keyword to declare a variable that can be accessed and modified by multiple threads. It ensures visibility of changes to the variable across threads.
+public class MyClass {
+    private volatile boolean running = true;
+
+    public void stop() {
+        running = false;
+    }
+}
+
+
+___________________________________________________________________________________________________
+
+
 Q35] Explain built in packages in java
+	In Java, the term "built-in packages" refers to the standard library packages provided by the 
+	Java Development Kit (JDK). These packages contain a wide range of classes and interfaces that 
+	are essential for various programming tasks, including data manipulation, I/O operations, 
+	networking, and more.
+
+___________________________________________________________________________________________________
+
 
 Q36] Explain runtime polymorphism with upcasting 
+	Runtime polymorphism, also known as dynamic method dispatch, allows a Java program to determine 
+	the method to be invoked at runtime rather than compile time. This is achieved through method 
+	overriding, where a subclass provides a specific implementation of a method already defined in 
+	its superclass.
+
+	Upcasting is a technique where a subclass object is referred to by a superclass reference. 
+	This allows the program to treat objects of different subclasses in a uniform way.
+
+	
+___________________________________________________________________________________________________
+
 
 Q37] Explain compile time polymorphism with upcasting
 
+	Compile-time polymorphism (also known as static polymorphism) is achieved through method 
+	overloading in Java. It allows multiple methods with the same name but different parameters 
+	to coexist in a class. The method to be called is determined at compile time based on the 
+	method signature (i.e., method name and parameter list).
+
+	Upcasting can also be involved in compile-time polymorphism, though its role is more 
+	significant in runtime polymorphism. 
+
+	
+
+___________________________________________________________________________________________________
+
+
 Q38] Difference between equals() method and == operator
+
+	Aspect	equals() Method	== Operator
+Purpose	Compares the content or state of objects for equality.	Compares object references to check if they are the same instance.
+Definition	Defined in the Object class and can be overridden by subclasses.	A basic operator provided by the Java language for reference comparison.
+Default Behavior	In Object class, it compares memory addresses (similar to ==).	Always compares memory addresses (reference equality).
+Custom Implementation	Can be overridden in classes to provide custom equality logic.	Cannot be customized; it always checks for reference equality.
+Usage	Used when you need to compare the values or logical equivalence of objects.	Used to check if two references point to the same object in memory.
+Example (String Comparison)	str1.equals(str2) checks if the content of str1 is the same as str2.	str1 == str2 checks if str1 and str2 reference the same object.
+Example (Array Comparison)	array1.equals(array2) typically checks for reference equality unless overridden.	array1 == array2 checks if both arrays point to the same memory location.
+
+___________________________________________________________________________________________________
+
 
 Q39] Difference between StringBuffer and StringBuilder
 
+Aspect	StringBuffer	StringBuilder
+Thread Safety	Synchronized, meaning it is thread-safe and can be used safely in concurrent environments.	Not synchronized, meaning it is not thread-safe but offers better performance in single-threaded contexts.
+Performance	Generally slower due to synchronization overhead, which can impact performance in multithreaded environments.	Generally faster due to the lack of synchronization, making it more suitable for single-threaded scenarios.
+Use Case	Preferred when working with strings in a multithreaded environment where thread safety is required.	Preferred for use in single-threaded environments or where thread safety is not a concern.
+Introduced In	Part of Java since JDK 1.0.	Introduced in JDK 5.0 as a more efficient alternative to StringBuffer.
+API Similarities	Both provide similar methods for string manipulation, such as append(), insert(), delete(), and reverse().	Similar methods as StringBuffer, including append(), insert(), delete(), and reverse().
+Example Usage	```java	
+StringBuffer sb = new StringBuffer("Hello");		
+sb.append(" World");		
+System.out.println(sb.toString()); // Output: Hello World		
+```	```java	
+StringBuilder sb = new StringBuilder("Hello");		
+sb.append(" World");		
+System.out.println(sb.toString()); // Output: Hello World
+
+___________________________________________________________________________________________________
+
+
 Q40] Explain some built in methods of String class
+
+Length and Size
+
+int length()
+Returns the length of the string.
+Example: "hello".length() returns 5.
+Character Retrieval
+
+char charAt(int index)
+Returns the character at the specified index.
+Example: "hello".charAt(1) returns 'e'.
+Substring Operations
+
+String substring(int beginIndex)
+Returns a substring starting from the specified index.
+Example: "hello".substring(2) returns "llo".
+String substring(int beginIndex, int endIndex)
+Returns a substring from beginIndex to endIndex - 1.
+Example: "hello".substring(1, 4) returns "ell".
+String Comparison
+
+boolean equals(Object another)
+Compares the string to another object for equality.
+Example: "hello".equals("hello") returns true.
+boolean equalsIgnoreCase(String another)
+Compares the string to another string, ignoring case considerations.
+Example: "hello".equalsIgnoreCase("HELLO") returns true.
+String Search
+
+int indexOf(int ch)
+Returns the index of the first occurrence of the specified character.
+Example: "hello".indexOf('l') returns 2.
+int indexOf(String str)
+Returns the index of the first occurrence of the specified substring.
+Example: "hello".indexOf("ll") returns 2.
+int lastIndexOf(int ch)
+Returns the index of the last occurrence of the specified character.
+Example: "hello".lastIndexOf('l') returns 3.
+String Manipulation
+
+String trim()
+Removes leading and trailing whitespace.
+Example: " hello ".trim() returns "hello".
+String toLowerCase()
+Converts the string to lowercase.
+Example: "HELLO".toLowerCase() returns "hello".
+String toUpperCase()
+Converts the string to uppercase.
+Example: "hello".toUpperCase() returns "HELLO".
+String replace(char oldChar, char newChar)
+Replaces all occurrences of oldChar with newChar.
+Example: "hello".replace('l', 'x') returns "hexxo".
+String replaceAll(String regex, String replacement)
+Replaces all occurrences of the regex with the specified replacement.
+Example: "hello123".replaceAll("\\d", "*") returns "hello***".
+String Splitting and Joining
+
+String[] split(String regex)
+Splits the string into an array of substrings based on the specified regex.
+Example: "a,b,c".split(",") returns ["a", "b", "c"].
+String join(CharSequence delimiter, CharSequence... elements)
+Joins multiple strings with the specified delimiter.
+Example: String.join("-", "2024", "07", "31") returns "2024-07-31".
+String Conversion
+
+String valueOf(int i)
+Returns the string representation of the integer.
+Example: String.valueOf(123) returns "123".
+String toString()
+Returns the string itself (inherited from Object class).
+String Formatting
+
+String format(String format, Object... args)
+Returns a formatted string using the specified format string and arguments.
+Example: String.format("Hello %s!", "World") returns "Hello World!".
+String Interning
+
+String intern()
+Returns a canonical representation of the string object.
+Example: String s1 = new String("hello"); String s2 = s1.intern(); ensures that s1 and s2 refer to the same string literal in the string pool.
+
+___________________________________________________________________________________________________
+
 
 Q41] Explain some built in methods of StringBuilder class
 
+The `StringBuffer` class in Java provides methods for mutable string manipulation. Here is a concise overview of its key built-in methods:
+
+1. **Length and Capacity**
+   - `int length()`
+     - Returns the length of the current string.
+   - `int capacity()`
+     - Returns the current capacity of the `StringBuffer`.
+
+2. **Appending and Inserting**
+   - `StringBuffer append(String str)`
+     - Appends the specified string to this `StringBuffer`.
+   - `StringBuffer insert(int offset, String str)`
+     - Inserts the specified string at the given position.
+
+3. **Deleting and Replacing**
+   - `StringBuffer delete(int start, int end)`
+     - Removes characters from the start index to end index - 1.
+   - `StringBuffer deleteCharAt(int index)`
+     - Removes the character at the specified index.
+   - `StringBuffer replace(int start, int end, String str)`
+     - Replaces the characters from start index to end index - 1 with the specified string.
+
+4. **Reverse**
+   - `StringBuffer reverse()`
+     - Reverses the sequence of characters in the `StringBuffer`.
+
+5. **Substring**
+   - `String substring(int start)`
+     - Returns a substring starting from the specified index.
+   - `String substring(int start, int end)`
+     - Returns a substring from start index to end index - 1.
+
+6. **Character Retrieval**
+   - `char charAt(int index)`
+     - Returns the character at the specified index.
+   - `void setCharAt(int index, char ch)`
+     - Sets the character at the specified index to the given character.
+
+7. **Conversion**
+   - `String toString()`
+     - Converts the `StringBuffer` to a `String`.
+
+### Example Usage
+
+```java
+StringBuffer sb = new StringBuffer("Hello");
+sb.append(" World");          // Appends " World"
+sb.insert(5, ",");            // Inserts "," at index 5
+sb.delete(5, 6);              // Deletes "," at index 5
+sb.replace(6, 11, "Java");    // Replaces " World" with "Java"
+sb.reverse();                 // Reverses the string
+String result = sb.toString(); // Converts to String
+```
+
+### Summary
+
+`StringBuffer` methods allow efficient manipulation of mutable strings, including appending, inserting, deleting, and reversing characters. It is useful for scenarios where frequent modifications to a string are required.
+
+___________________________________________________________________________________________________
+
+
 Q42] Explain some built in methods of StringBuffer class
 
+The `StringBuilder` class in Java provides a set of methods for mutable string manipulation. Here's a concise overview of its key built-in methods:
+
+1. **Length and Capacity**
+   - `int length()`
+     - Returns the length of the current sequence.
+   - `int capacity()`
+     - Returns the current capacity of the `StringBuilder`.
+
+2. **Appending and Inserting**
+   - `StringBuilder append(String str)`
+     - Appends the specified string to this `StringBuilder`.
+   - `StringBuilder insert(int offset, String str)`
+     - Inserts the specified string at the given position.
+
+3. **Deleting and Replacing**
+   - `StringBuilder delete(int start, int end)`
+     - Removes characters from the start index to end index - 1.
+   - `StringBuilder deleteCharAt(int index)`
+     - Removes the character at the specified index.
+   - `StringBuilder replace(int start, int end, String str)`
+     - Replaces characters from start index to end index - 1 with the specified string.
+
+4. **Reverse**
+   - `StringBuilder reverse()`
+     - Reverses the sequence of characters in the `StringBuilder`.
+
+5. **Substring**
+   - `String substring(int start)`
+     - Returns a substring starting from the specified index.
+   - `String substring(int start, int end)`
+     - Returns a substring from start index to end index - 1.
+
+6. **Character Retrieval**
+   - `char charAt(int index)`
+     - Returns the character at the specified index.
+   - `void setCharAt(int index, char ch)`
+     - Sets the character at the specified index to the given character.
+
+7. **Conversion**
+   - `String toString()`
+     - Converts the `StringBuilder` to a `String`.
+
+### Example Usage
+
+```java
+StringBuilder sb = new StringBuilder("Hello");
+sb.append(" World");          // Appends " World"
+sb.insert(5, ",");            // Inserts "," at index 5
+sb.delete(5, 6);              // Deletes "," at index 5
+sb.replace(6, 11, "Java");    // Replaces " World" with "Java"
+sb.reverse();                 // Reverses the string
+String result = sb.toString(); // Converts to String
+```
+
+### Summary
+
+`StringBuilder` methods facilitate efficient mutable string operations, including appending, inserting, deleting, and reversing characters. It is optimized for performance in single-threaded environments.
+
+___________________________________________________________________________________________________
+
+
+Q43] Difference between ArrayList and LinkedList in real world ex. Prove diff. Programatically
+
+The `ArrayList` and `LinkedList` classes in Java are both implementations of the `List` interface but differ in their underlying data structures and performance characteristics. Here’s a comparison with real-world examples and a simple program to demonstrate the differences:
+
+### Key Differences
+
+| **Aspect**         | **ArrayList**                                      | **LinkedList**                                    |
+|--------------------|----------------------------------------------------|--------------------------------------------------|
+| **Data Structure** | Resizable array                                    | Doubly linked list                               |
+| **Access Time**    | O(1) for index-based access (fast random access)   | O(n) for index-based access (sequential access)  |
+| **Insertion**      | O(1) if adding at the end (amortized)              | O(1) for adding/removing at the beginning or end |
+|                    | O(n) if inserting/removing at arbitrary positions  | O(n) for inserting/removing at arbitrary positions|
+| **Memory Usage**   | Less memory overhead due to storage of actual data | More memory overhead due to storing node pointers |
+| **Use Case**       | Suitable for frequent read operations              | Suitable for frequent insertions and deletions  |
+
+### Real-World Example
+
+- **ArrayList**: Imagine you have a list of student names for a class where you frequently access the names to display the list but rarely add or remove names. An `ArrayList` would be ideal due to its fast random access.
+- **LinkedList**: Consider a scenario where you're implementing a playlist for a music player where songs are frequently added to the beginning or end, or moved around. A `LinkedList` would be more suitable due to its efficient insertions and deletions.
+
+### Demonstration Program
+
+Let's write a program to demonstrate the differences in performance between `ArrayList` and `LinkedList` for add, remove, and get operations.
+
+```java
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
+public class ListComparison {
+    public static void main(String[] args) {
+        List<Integer> arrayList = new ArrayList<>();
+        List<Integer> linkedList = new LinkedList<>();
+
+        // Populate lists
+        for (int i = 0; i < 100000; i++) {
+            arrayList.add(i);
+            linkedList.add(i);
+        }
+
+        // Measure time for random access (get operation)
+        long startTime = System.nanoTime();
+        arrayList.get(50000);
+        long endTime = System.nanoTime();
+        System.out.println("ArrayList get: " + (endTime - startTime) + " ns");
+
+        startTime = System.nanoTime();
+        linkedList.get(50000);
+        endTime = System.nanoTime();
+        System.out.println("LinkedList get: " + (endTime - startTime) + " ns");
+
+        // Measure time for insertion in the middle
+        startTime = System.nanoTime();
+        arrayList.add(50000, -1);
+        endTime = System.nanoTime();
+        System.out.println("ArrayList add in middle: " + (endTime - startTime) + " ns");
+
+        startTime = System.nanoTime();
+        linkedList.add(50000, -1);
+        endTime = System.nanoTime();
+        System.out.println("LinkedList add in middle: " + (endTime - startTime) + " ns");
+
+        // Measure time for removal from the middle
+        startTime = System.nanoTime();
+        arrayList.remove(50000);
+        endTime = System.nanoTime();
+        System.out.println("ArrayList remove from middle: " + (endTime - startTime) + " ns");
+
+        startTime = System.nanoTime();
+        linkedList.remove(50000);
+        endTime = System.nanoTime();
+        System.out.println("LinkedList remove from middle: " + (endTime - startTime) + " ns");
+    }
+}
+```
+
+### Expected Output
+
+The actual times will vary depending on the system, but typically you would see:
+
+- **ArrayList**: Faster random access (`get`), slower insertion and removal in the middle.
+- **LinkedList**: Slower random access (`get`), faster insertion and removal at the beginning or end, but similar or slower for insertion and removal in the middle compared to `ArrayList` due to traversal time.
+
+### Summary
+
+- **ArrayList** is better suited for applications where fast access to elements is required.
+- **LinkedList** is more efficient for applications where frequent additions and removals are performed, especially at the beginning or end of the list.
+
+___________________________________________________________________________________________________
+
+
+Q44] 
