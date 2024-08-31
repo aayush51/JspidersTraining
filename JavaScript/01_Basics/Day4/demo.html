@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to javascript</h1>
+    <h2>31 August 2024</h2>
+    <ul>
+        <li>Primitive Datatype</li>
+        <ol>
+            <li>Number</li>
+            <li>String</li>
+            <li>Boolean</li>
+            <li>Undefined</li>
+            <li>null</li>
+            <li>Bigint</li>
+            <li class="red">NaN</li>
+            <p>when we perform any arithmatic operation with not a number we get NaN</p>
+            <li class="red">Symbol</li>
+            <p>We use Symbol() constructor to declare Symbol</p>
+        </ol>
+        <li>Non Primitive Datatype</li>
+        <ol>
+            <li>Array</li>
+            <li>Object</li>
+            <li>Function</li>
+        </ol>
+    </ul>
+
+    <hr>
+    
+    <table border="1px">
+        <tr>
+            <td></td>
+            <td>var</td>
+            <td>let</td>
+            <td>const</td>
+        </tr>
+        <tr>
+            <td>declaration</td>
+            <td>✔ var a;</td>
+            <td>✔ let b;</td>
+            <td>❌ const c;</td>
+        </tr>
+        <tr>
+            <td>initialization</td>
+            <td>✔ var a; a=10;</td>
+            <td>✔ let b; b=10;</td>
+            <td>❌ const c; c=10;</td>
+        </tr>
+        <tr>
+            <td>declaration and initialization</td>
+            <td>✔ var a=10;</td>
+            <td>✔ let b=10;</td>
+            <td>✔ const c=10;</td>
+        </tr>
+        <tr>
+            <td>redeclaration</td>
+            <td>✔ var a; var a;</td>
+            <td>❌ let b; let b;</td>
+            <td>❌ const c; const c;</td>
+        </tr>
+        <tr>
+            <td>reinitialization</td>
+            <td>✔ var a=10; a=20;</td>
+            <td>✔ let b=10; b=20;</td>
+            <td>❌ const c=10; c=20;</td>
+        </tr>
+        <tr>
+            <td>redeclaration and reinitialization</td>
+            <td>✔ var a=10; var a=20;</td>
+            <td>❌ let b=10; let b=20;</td>
+            <td>❌ const c=10; const c=20;</td>
+        </tr>
+    </table>
+
+    <script src="demo.js">
+
+    </script>
+</body>
+
+</html>
