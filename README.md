@@ -1,1 +1,2 @@
-<h1>Daily Code Repo</h1>
+<h1>Jspiders Training</h1>
+<h2>This repository contains all coding and programming practices done during training
