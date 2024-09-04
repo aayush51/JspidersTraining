@@ -101,3 +101,28 @@
 // animalSound("goat","mehh mehh")
 
 
+function greetme(name) {
+    switch (name) {
+        case 'mahesh':
+            console.log(`hello , Good morning , welcome ${name}`);
+            break;
+        case 'anish':
+            console.log(`hello , Good morning , welcome ${name}`);
+            break;
+        case 'aayush':
+            console.log(`hello , Good morning , welcome ${name}`);
+            break;
+        case 'gaurav':
+            console.log(`hello , Good morning , welcome ${name}`);
+            break;
+        case 'rahul':
+            console.log(`hello , Good morning , welcome ${name}`);
+            break;
+    
+        default:
+            console.log("invalid name");
+            break;
+    }
+}
+
+greetme('aayush')

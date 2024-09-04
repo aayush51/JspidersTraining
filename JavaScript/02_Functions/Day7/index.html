@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+
+<body>
+    <h1>Welcome to javascript</h1>
+    <h2>4 September 2024</h2>
+    <ul>
+        <li>function declaraction</li>
+        <ul>
+            <li>function as a expression</li>
+            <li>function without expression</li>
+            <li>Arrow function</li>
+            <br>
+            <li>Immediate invoke function</li>
+            <code>
+                ( ( )=>{ }  )()   <br>
+                ( (param)=>{ }  )(param)    <br>
+                ( (param)=>{ console.log(object); }  )(param)   <br>
+            </code>
+            <br>
+            <li>Higher order and Callback function</li>
+            <code>
+                let hof = (xcbf)=>{ xcbf() } <br>
+                let cbf = ()=>{ console.log("Hello"); } <br>
+                hof(cbf) //output : Hello <br>
+            </code>
+
+            <ul>
+                <li>function which is accepting another function as argument is called Higher order function</li>
+                <li>function used to pass as argument in other function is Callback function</li>
+            </ul>
+        </ul>
+    </ul>
+
+    <script src="demo.js">
+
+    </script>
+
+</body>
+
+</html>
