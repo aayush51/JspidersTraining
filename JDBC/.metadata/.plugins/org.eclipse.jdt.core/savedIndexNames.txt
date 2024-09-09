@@ -1,0 +1,7 @@
+INDEX VERSION 1.134+C:\Users\AAYUSH\Desktop\QspidersTraining\jdbc\.metadata\.plugins\org.eclipse.jdt.core
+2113193463.index
+3672793119.index
+1865797976.index
+4061069112.index
+2750716043.index
+662308885.index

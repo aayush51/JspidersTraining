@@ -1,0 +1,7 @@
+package com.cricketer;
+import java.sql.*;
+public class CustomFetching {
+	
+	
+
+}

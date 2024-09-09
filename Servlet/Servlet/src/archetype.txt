@@ -1,0 +1,1 @@
+maven-archetype-webapp	1.5
