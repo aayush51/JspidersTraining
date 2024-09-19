@@ -1,11 +1,15 @@
 package com.qsp;
 
+import java.io.IOException;
+
+import javax.servlet.ServletException;
 import javax.servlet.http.*;
 
 @SuppressWarnings("serial")
 public class HttpExample extends HttpServlet {
-	public static void main(String[] args) {
-		
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		//PrintWriter
 	}
-
+	
 }
