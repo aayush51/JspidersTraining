@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Calculator</title>
+<style type="text/css">
+.head {
+	text-align: center;
+	font-size: 50px;
+	font-family: fantasy;
+	font-weight: 500;
+	margin-bottom: 50px;
+}
+
+.error {
+	color: red;
+	font-family: monospace;
+	text-align: center;
+	margin-top: 50px;
+}
+
+body {
+	align-content: center;
+}
+
+.cbody {
+	text-align: center; 
+	font-family : sans-serif;
+	font-variant: small-caps;
+	width: 500px;
+	font-family: sans-serif;
+	margin:auto auto;
+}
+
+.ans {
+	color: fuchsia;
+	font-family: monospace;
+	font-size: 20px;
+	text-align: center;
+	margin-top: 50px;
+	text-align: center;
+}
+
+input {
+	appearance: none;
+}
+
+input[type=text]:focus {
+	background-color: lightblue;
+	border: 3px solid #555;
+}
+
+input[type=radio] {
+	border: 6px solid graytext;
+	border-radius: 100%;
+	border-style: groove;
+}
+
+input:checked {
+	border: 6.5px solid aqua;
+	border-style: groove;
+}
+
+input[type=submit] {
+	font-family: sans-serif;
+	font-size: 15px;
+	padding: 10px 30px;
+}
+
+.rbt {
+	text-align: left;
+	width: 100px;
+	margin:auto auto;
+}
+</style>
+</head>
+<body>
+
+	<h2 class="head">Calculator</h2>
+
+	<div class="cbody">
+		<form action="Calculate">
+			Enter First Number: <input type="text" name="n1"> <br> <br>
+			Enter Second Number: <input type="text" name="n2"> <br>
+			<br>
+			<div class="rbt">
+				<input type="radio" id="Add" name="op" value="add"> <label
+					for="Add">Add</label> <br> <br> <input type="radio"
+					id="Subtract" name="op" value="subtract"> <label
+					for="Subtract">Subtract</label> <br> <br> <input
+					type="radio" id="Multiply" name="op" value="multiply"> <label
+					for="Multiply">Multiply</label> <br> <br> <input
+					type="radio" id="Divide" name="op" value="divide"> <label
+					for="Divide">Divide</label> <br> <br>
+			</div>
+			<input type="submit" value="Perform"> <br>
+		</form>
+
+	</div>
+
+
+</body>
+</html>
