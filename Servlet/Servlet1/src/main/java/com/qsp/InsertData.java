@@ -5,6 +5,8 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+import javax.servlet.annotation.WebServlet;
+@WebServlet("/Storedata")
 public class InsertData {
 	
 	public static int insert(String name,long phone,String email,String gender,String address) {
@@ -12,7 +14,7 @@ public class InsertData {
 		try {
 			Class.forName("org.postgresql.Driver");
 			Connection con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/qsp","postgres","root");
-			PreparedStatement ps = con.prepareStatement("insert into entries values(?,?,?,?,?)");
+			PreparedStatement ps = con.prepareStatement("insert into entries values (?,?,?,?,?)");
 			ps.setString(1, name);
 			ps.setLong(2, phone);
 			ps.setString(3, email);

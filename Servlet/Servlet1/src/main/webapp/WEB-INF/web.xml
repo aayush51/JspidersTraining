@@ -10,16 +10,19 @@
 		<servlet-name>FirstServlet</servlet-name>
 		<servlet-class>com.qsp.FirstServlet</servlet-class>
 	</servlet>
-	<servlet>
-		<servlet-name>SecondServlet</servlet-name>
-		<servlet-class>com.qsp.SecondServlet</servlet-class>
-	</servlet>
 	<servlet-mapping>
 		<servlet-name>FirstServlet</servlet-name>
 		<url-pattern>/first</url-pattern>
 	</servlet-mapping>
+	
+	
 	<servlet-mapping>
 		<servlet-name>SecondServlet</servlet-name>
 		<url-pattern>/second</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>SecondServlet</servlet-name>
+		<servlet-class>com.qsp.SecondServlet</servlet-class>
+	</servlet>
+	
 </web-app>
