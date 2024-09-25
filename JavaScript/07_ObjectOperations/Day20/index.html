@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome To JavaScript</h1>
+    <h2>25 September 2024</h2>
+
+
+    <ul>
+        <h3>Copies of Object</h3>
+        <li>Deep copy <span style="color: red;">(Important for interview)</span></li>
+        <ul>
+            <li><span style="color: blueviolet;">Deep object</span> : The changes made in child(copy) object will not affect the parent object</li>
+            <h3>Ways of Creating Deep Copy</h3>
+            <li>Way1 : Creating Deep copy by using JSON Object</li>
+            <li>Way2 : Creating Deep copy by using Object.assign() </li>
+        </ul>
+
+        <h2>This Keyword</h2>
+        <ol>
+            <h3>Scenarios of this keyword</h3>
+            <li class="notes">In Global scope (outside function) this keyword points towards the window object</li>
+            <li class="notes">In Local scope Inside normal function this keyword points towards the window object</li>
+            <li class="notes">In Local scope Inside arrow function this keyword points towards the window object </li>
+            <li class="notes">In Local scope of Object Inside normal function this keyword points towards the <span style="color: crimson;font-weight: bolder;">current object</span></li>
+            <li class="notes">In Local scope of Object Inside arrow function this keyword points towards the window object </li>
+            <li class="notes">object -> normal function -> arrow function : arrow function nested inside normal function points towards current object due to lexical scoping , <br>instead of pointing window object it points towards current object</li>
+            <li class="notes"></li>
+        </ol>
+    </ul>
+
+    <script src="demo.js"></script>
+</body>
+</html>
