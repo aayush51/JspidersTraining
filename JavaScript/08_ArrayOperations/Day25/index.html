@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+    <style>
+        * {
+            font-family: monospace;
+        }
+
+        h2 {
+            font-size: 22px;
+        }
+
+        h3 {
+            font-size: 20px;
+        }
+
+        li {
+            font-size: 18px;
+        }
+
+        pre {
+            font-size: 17px;
+        }
+
+        td {
+            font-size: 14px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome To JavaScript</h1>
+    <h2>1 October 2024</h2>
+    <h2>Array</h2>
+
+    <table border="1px">
+        <tr>
+            <td>HOF</td>
+            <td>Use</td>
+            <td>Can we return anything ?</td>
+            <td>If returning , returned value is in which format ?</td>
+            <td>Are we modifying original array?</td>
+        </tr>
+        <tr>
+            <td>forEach(cbf()=>{})</td>
+            <td>Iterate Over Arary</td>
+            <td>No</td>
+            <td>N/A</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>sort(cbf(a,b)=>{return a-b})</td>
+            <td>sort values</td>
+            <td>yes</td>
+            <td>cbf takes two parameters - current value and next value <br>
+                It returns a value that is less than, equal to, or greater than 0 <br>
+                If the result is less than 0, the current value comes first <br>
+                If the result is greater than 0, the next value comes first <br>
+                If the result is equal to 0, the order of the values remains the same
+            </td>
+            <td>Yes</td>
+        </tr>
+    </table>
+
+    <script src="demo.js"></script>
+</body>
+
+</html>

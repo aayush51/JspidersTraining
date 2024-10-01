@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: monospace;
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+
+        h3 {
+            font-size: 20px;
+        }
+
+        li {
+            font-size: 18px;
+        }
+
+        pre {
+            font-size: 17px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome To JavaScript</h1>
+    <h2>30 September 2024</h2>
+    <h2>Array</h2>
+    <ul>
+        <li>
+            <h3>Functions of array</h3>
+        </li>
+        <li>Higher Order Functions</li>
+        <pre>
+Q1 - can we return anything ?
+Q2 - if returning , returned value is in which format ?
+Q3 - are we modifying original array?
+        </pre>
+        <ul>
+            <li>array.forEach(cbf(element,index,wholeArray)=>{})</li>
+            <pre>
+Iterate over array
+callback Function takes element , index, wholeArray as parameters
+It doesnt return anything ( explicitly also it doesnt return anything )
+            </pre>
+            <li>array.sort()</li>
+            <pre>
+sort value by first digit or letter of value
+It affects original array
+            </pre>
+            <li>array.sort(cbf(a,b)=>{})</li>
+            <pre>
+cbf takes two parameters - current value and next value
+It returns a value that is less than, equal to, or greater than 0
+If the result is less than 0, the current value comes first
+If the result is greater than 0, the next value comes first
+If the result is equal to 0, the order of the values remains the same
+            </pre>
+        </ul>
+
+    </ul>
+
+    <!-- <table border="1px">
+        <tr>
+            <td>HOF</td>
+            <td>Use</td>
+            <td>can we return anything ?</td>
+            <td>If returning , returned value is in which format ?</td>
+            <td>Are we modifying original array?</td>
+        </tr>
+        <tr>
+            <td>forEach</td>
+            <td>Iterate Over Arary</td>
+            <td>No</td>
+        </tr>
+    </table> -->
+
+    <script src="demo.js"></script>
+</body>
+
+</html>

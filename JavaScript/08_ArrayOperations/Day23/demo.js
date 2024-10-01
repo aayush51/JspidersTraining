@@ -215,9 +215,10 @@ let data = [
 // data.push(userObj)
 console.log(data);
 
-let jsonData = JSON.stringify(data[0])
-let newData = JSON.parse(jsonData)
-console.log(newData);
+let jsonData = JSON.stringify(data)
+// let newData = JSON.parse(jsonData)
+console.log(jsonData);
+// console.log(newData);
 
 
 
