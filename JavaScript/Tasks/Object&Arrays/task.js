@@ -9,10 +9,10 @@
 //?    Extract all the keys from the student object and print each key along with its corresponding value.
 
 //  let student = {
-//    name: "Alice",
-//    age: 22,
+//    name: "Raj",
+//    age: 23,
 //    major: "Computer Science",
-//    GPA: 3.8,
+//    GPA: 8.8,
 //  };
 
 //  let keys = Object.keys(student);
@@ -32,10 +32,10 @@
 //?    Retrieve all the values from this movie object and print them in a structured format.
 
 // let movie = {
-//   title: "Inception",
+//   title: "Interstellar",
 //   director: "Christopher Nolan",
-//   releaseYear: 2010,
-//   rating: 8.8,
+//   releaseYear: 2014,
+//   rating: 9.3,
 // };
 
 // let values = Object.values(movie);
@@ -146,11 +146,11 @@
 //! 7. *Deep Copy using JSON Methods*
 //?    Given the same nested person object, create a deep copy of it. Modify the address in the deep copy and verify the original object remains unchanged.
 // const person = {
-//   name: "John",
-//   age: 35,
+//   name: "Gaurav",
+//   age: 25,
 //   address: {
-//     city: "New York",
-//     country: "USA",
+//     city: "Jalgaon",
+//     country: "India",
 //   },
 // };
 
@@ -165,10 +165,11 @@
 //?    Print each property of the smartphone object.
 
 // let smartphone = {
-//   brand: "MI",
-//   model: "REDMI 12 5G",
-//   ram: "8 GB",
-//   camera: "50 MP",
+//   brand: "Oppo",
+//   model: "A9 2020",
+//   ram: "4 GB",
+//   camera: "48 MP",
+//   price: 18000
 // };
 
 // let arr = Object.entries(smartphone);
@@ -189,13 +190,12 @@
 //       console.log(Driving a ${this.year} ${this.make} ${this.model});
 //     },
 //   };
-
 //   return obj;
 // }
 
-// const car1 = createCar("Toyota", "Corolla", 2015);
-// const car2 = createCar("Honda", "Civic", 2018);
-// const car3 = createCar("Ford", "Mustang", 2020);
+// const car1 = createCar("BMW", "Q3", 2013);
+// const car2 = createCar("Audi", "A2", 2016);
+// const car3 = createCar("Ford", "Mustang", 2019);
 
 // car1.drive();
 // car2.drive();
@@ -211,13 +211,13 @@
 //   }
 
 //   greet = function () {
-//     console.log(Good Morning, ${this.name});
+//     console.log(Good Morning ${this.name});
 //   };
 // }
 
-// const user1 = new User("Ayush More", "ayushmore@gmail.com");
-// const user2 = new User("Mahesh Mohite", "maheshmohite@gmail.com");
-// const user3 = new User("Gaurav More", "gmore@gmail.com");
+// const user1 = new User("Aayush", "aayush@gmail.com");
+// const user2 = new User("Mahesh", "mahesh@gmail.com");
+// const user3 = new User("Gaurav", "gme@gmail.com");
 
 // user1.greet();
 // user2.greet();
@@ -228,7 +228,8 @@
 
 // class Dog {
 //   constructor(name, breed) {
-//     (this.name = name), (this.breed = breed);
+//     this.name = name;
+//     this.breed = breed;
 //   }
 
 //   bark = function () {
@@ -236,8 +237,8 @@
 //   };
 // }
 
-// const dog1 = new Dog("Moti", "Golden Retriever");
-// const dog2 = new Dog("Pillya", "German Shepherd");
+// const dog1 = new Dog("Oreo", "German Shepherd");
+// const dog2 = new Dog("Roy", "Golden Retriever");
 
 // dog1.bark();
 // dog2.bark();
@@ -247,7 +248,8 @@
 
 // class Movie {
 //   constructor(title, director) {
-//     (this.title = title), (this.director = director);
+//     this.title = title:
+//     this.director = director;
 //   }
 
 //   getDetails = function () {
@@ -255,8 +257,8 @@
 //   };
 // }
 
-// let movie1 = new Movie("Bahubali", "Rajamauli");
-// let movie2 = new Movie("Inception", "Nolan");
+// let movie1 = new Movie("Avengers", "Russo");
+// let movie2 = new Movie("Interstellar", "Nolan");
 
 // movie1.getDetails();
 // movie2.getDetails();
@@ -289,7 +291,7 @@
 // let laptop = {
 //   brand: "ASUS",
 //   model: "TUF",
-//   price: 100000,
+//   price: 68000,
 // };
 
 // let newLaptop = Object.assign({}, laptop);
@@ -314,7 +316,7 @@
 //     console.log(Hello, my name is ${this.name});
 //   },
 //   performTask() {
-//     console.log("Doing things....");
+//     console.log("Doing tasks...");
 //   },
 // };
 
