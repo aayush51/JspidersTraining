@@ -70,21 +70,21 @@ public class CarDriver {
 		
 		
 		
-		Car car1 = new Car();
-		car1.setId(1004);
-		car1.setBrand("Tata");
-		
-		Engine engine1 = new Engine();
-		engine1.setId(104);
-		engine1.setCc(550);
-		
-		car1.setEngine(engine1);
-		
-		et.begin();
-		em.persist(car1);
-		em.persist(engine1);
-		et.commit();
-		System.out.println("Saved");
+//		Car car1 = new Car();
+//		car1.setId(1004);
+//		car1.setBrand("Tata");
+//		
+//		Engine engine1 = new Engine();
+//		engine1.setId(104);
+//		engine1.setCc(550);
+//		
+//		car1.setEngine(engine1);
+//		
+//		et.begin();
+//		em.persist(car1);
+//		em.persist(engine1);
+//		et.commit();
+//		System.out.println("Saved");
 
 	}
 

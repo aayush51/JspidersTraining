@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
   http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
 	version="2.1">
-	<persistence-unit name="dev">
+	<persistence-unit name="ems">
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 		<shared-cache-mode>ENABLE_SELECTIVE</shared-cache-mode>      <!-- for caching -->
 		<properties>
@@ -12,7 +12,7 @@
 				value="org.postgresql.Driver" />
 				
 			<property name="javax.persistence.jdbc.url"
-				value="jdbc:postgresql://localhost:5432/qsp" />
+				value="jdbc:postgresql://localhost:5432/ems" />
 				
 			<property name="javax.persistence.jdbc.user"
 				value="postgres" />

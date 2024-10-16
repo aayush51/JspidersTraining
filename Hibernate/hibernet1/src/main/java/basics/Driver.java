@@ -98,13 +98,13 @@ public class Driver {
 		
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("dev");
 		EntityManager em = emf.createEntityManager();
-		Query query = em.createQuery("select s from Student s where s.name=?1 and phone=?2");
-		query.setParameter(1, "Raj");
-		query.setParameter(2, 784596987l);
-		Student s = (Student) query.getSingleResult();
-		System.out.println(s.getId());
-		System.out.println(s.getName());
-		System.out.println(s.getPhone());
+//		Query query = em.createQuery("select s from Student s where s.name=?1 and phone=?2");
+//		query.setParameter(1, "Raj");
+//		query.setParameter(2, 784596987l);
+//		Student s = (Student) query.getSingleResult();
+//		System.out.println(s.getId());
+//		System.out.println(s.getName());
+//		System.out.println(s.getPhone());
 
 	}
 
