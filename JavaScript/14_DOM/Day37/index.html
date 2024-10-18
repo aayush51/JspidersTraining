@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Array</title>
+    <title>DOM</title>
     <style>
         * {
             font-family: monospace;
@@ -20,6 +20,7 @@
 
         li {
             font-size: 18px;
+            margin: 10px auto;
         }
 
         pre {
@@ -45,19 +46,35 @@
 
         <li>DOM API</li>
         <ul>
-            <li>document.getElementById("h1")</li>
-            <li>document.</li>
-            <li>document.</li>
-            <li>document.</li>
-            <li>document.</li>
+            <li>document.getElementById("id")</li>
+            <li>document.getElementsByTagName("tagName")</li>
+            <li>document.getElementsByClassName("className")</li>
+            <li>document.querySelector("cssSelector")</li>
+            <li>document.querySelectorAll("cssSelector")</li>   
         </ul>
         <li>DOM Tree</li>
 
     </ul>
 
-    <div class="dom">
-        <h1 id="h1tag">Hello World</h1>
+
+    <div>
+        JavaScript
+        <form action="">
+            <input type="text" name="" id="inp">
+        </form>
     </div>
+
+
+    <div class="dom">
+        <h1 id="h1">Hello World</h1>
+        <h1 id="h1">Hello World</h1>
+        <form action="">
+            <input type="text" name="" id="userInput1" class="userInput">
+            <input type="text" name="" id="userInput2" class="userInput">
+            <input type="text" name="" id="userInput3" class="userInput">
+        </form>
+    </div>
+    
     <script src="demo.js"></script>
 </body>
 
