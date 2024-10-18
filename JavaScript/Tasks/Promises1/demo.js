@@ -78,7 +78,9 @@ promise4.then((result) => {
 //    **Example Goal**: The console should display the title of the post you fetched.
 
 
-fetch("https://jsonplaceholder.typicode.com/posts/1").then((response) => { return response.json() }).then((data) => {
+fetch("https://jsonplaceholder.typicode.com/posts/1")
+.then((response) => { return response.json() })
+.then((data) => {
     console.log(data.title);
 });
 
@@ -94,7 +96,9 @@ fetch("https://jsonplaceholder.typicode.com/posts/1").then((response) => { retur
 //    **Example Goal**: You should see “Error: Could not retrieve data” logged to the console if the request fails.
 
 
-fetch("https://jsonplaceholder.typicode.com/nonexistent").then((response) => response.json()).catch((error) => {
+fetch("https://jsonplaceholder.typicode.com/nonexistent")
+.then((response) => response.json())
+.catch((error) => {
     console.log(error);
 });
 
@@ -119,7 +123,8 @@ let promise5 = new Promise((resolve, reject) => {
 });
 promise5.then((result) => {
     console.log(result);
-}).catch((error) => {
+})
+.catch((error) => {
     console.log(error);
 });
 
@@ -132,7 +137,9 @@ promise5.then((result) => {
 //    **Example Goal**: The console should display the list of users in JSON format.
 
 
-fetch("https://jsonplaceholder.typicode.com/users").then((response) => response.json()).then((data) => {
+fetch("https://jsonplaceholder.typicode.com/users")
+.then((response) => response.json())
+.then((data) => {
     console.log(data);
 });
 
@@ -149,9 +156,13 @@ fetch("https://jsonplaceholder.typicode.com/users").then((response) => response.
 
 //    **Example Goal**: The console should first show the post data, then the user details associated with that post.
 
-fetch("https://jsonplaceholder.typicode.com/posts/1").then((response) => response.json()).then((data) => {
+fetch("https://jsonplaceholder.typicode.com/posts/1")
+.then((response) => response.json())
+.then((data) => {
     console.log(data);
-    fetch("https://jsonplaceholder.typicode.com/users/" + data.userId).then((response) => response.json()).then((data) => {
+    fetch("https://jsonplaceholder.typicode.com/users/" + data.userId)
+    .then((response) => response.json())
+    .then((data) => {
         console.log(data);
     });
 });
@@ -180,7 +191,8 @@ let promise6 = new Promise((resolve, reject) => {
 });
 promise6.then((result) => {
     console.log(result);
-}).catch((error) => {
+})
+.catch((error) => {
     console.log(error);
 });
 
@@ -206,7 +218,8 @@ let promise7 = new Promise((resolve, reject) => {
 });
 promise7.then((result) => {
     console.log(result);
-}).catch((error) => {
+})
+.catch((error) => {
     console.log(error);
 });
 
@@ -225,7 +238,9 @@ promise7.then((result) => {
 //    **Example Goal**: The console should display an array of usernames, extracted from the fetched user data.
 
 
-fetch("https://jsonplaceholder.typicode.com/users").then((response) => response.json()).then((data) => {
+fetch("https://jsonplaceholder.typicode.com/users")
+.then((response) => response.json())
+.then((data) => {
     let usernames = data.map((user) => user.username);
     console.log(usernames);
 });
@@ -253,7 +268,8 @@ let promise8 = new Promise((resolve, reject) => {
 });
 promise8.then((result) => {
     console.log(result);
-}).catch((error) => {
+})
+.catch((error) => {
     console.log(error);
 });
 
@@ -268,7 +284,9 @@ promise8.then((result) => {
 //    **Example Goal**: The console should display the title of the first post.
 
 
-fetch("https://jsonplaceholder.typicode.com/posts").then((response) => response.json()).then((data) => {
+fetch("https://jsonplaceholder.typicode.com/posts")
+.then((response) => response.json())
+.then((data) => {
     console.log(data[0].title);
 });
 
@@ -284,8 +302,12 @@ fetch("https://jsonplaceholder.typicode.com/posts").then((response) => response.
 //    **Example Goal**: The console should first display the user data, followed by the posts associated with that user.
 
 
-fetch("https://jsonplaceholder.typicode.com/users/1").then((response) => response.json()).then((user) => {
-    fetch(`https://jsonplaceholder.typicode.com/posts?userId=${user.id}`).then((response) => response.json()).then((posts) => {
+fetch("https://jsonplaceholder.typicode.com/users/1")
+.then((response) => response.json())
+.then((user) => {
+    fetch(`https://jsonplaceholder.typicode.com/posts?userId=${user.id}`)
+    .then((response) => response.json())
+    .then((posts) => {
         console.log(user);
         console.log(posts);
     });
