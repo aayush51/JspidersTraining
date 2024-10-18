@@ -53,7 +53,7 @@ p.then(
 fetch('https://api.github.com/users').then(resp=> {return resp.json()}).then()
 
 
-//- promises are objects i js
+//- promises are objects in js
 //- promises are used to handle async task
 //- with promises we get 3 states - pending, resolve, rejected
 //- pending - promise will be in pending state when it is neither resolve or rejected
@@ -63,4 +63,7 @@ fetch('https://api.github.com/users').then(resp=> {return resp.json()}).then()
 //-             when promise is rejected it will call catch block & we can pass arguments along with it i.e. error
 //-             catch block can be used to handle errors and exceptions
 
-//! promise can not be in resolve
+//! promise can be either resolve or reject
+//- some asynchronous task in js will internally return promise 
+//- we just have to handle that promise using then and catch block
+//- fetch()

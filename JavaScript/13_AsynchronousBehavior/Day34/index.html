@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+    <style>
+        * {
+            font-family: monospace;
+        }
+
+        h2 {
+            font-size: 22px;
+        }
+
+        h3 {
+            font-size: 20px;
+        }
+
+        li {
+            font-size: 18px;
+        }
+
+        pre {
+            font-size: 17px;
+            line-height: 1;
+        }
+
+        td {
+            font-size: 14px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome To JavaScript</h1>
+    <h2>15 October 2024</h2>
+
+    <ul>
+        <h2>Promises</h2>
+        <li>promises are objects in js</li>
+        <li>used to handle async task</li>
+
+        <li>new Promise()</li>
+        <li>promise.then() block</li>
+        <li>promise.catch() block</li>
+
+        <h2>Promise states</h2>
+        <li>pending</li>
+        <pre>promise will be in pending state when it is neither resolve or rejected</pre>
+        
+        <li>resolve</li>
+        <pre>when your promise is funfilled it is in resolved state</pre>
+        <pre>when promise is resolved it will call then block & we can pass arguments along with it</pre>
+
+        <li>reject</li>
+        <pre>when your promise is not funfilled it is in rejected state</pre>
+        <pre>when promise is rejected it will call catch block & we can pass arguments along with it i.e. error</pre>
+        <pre>catch block can be used to handle errors and exceptions</pre>
+
+        <li>promise can be either resolve or reject</li>
+        <li>some asynchronous task in js will internally return promise, we just have to handle that promise using then and catch block</li>
+        <li>ex- fetch()</li>
+
+        
+    </ul>
+
+    <script src="demo.js"></script>
+</body>
+
+</html>

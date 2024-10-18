@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+    <style>
+        * {
+            font-family: monospace;
+        }
+
+        h2 {
+            font-size: 22px;
+        }
+
+        h3 {
+            font-size: 20px;
+        }
+
+        li {
+            font-size: 18px;
+        }
+
+        pre {
+            font-size: 17px;
+        }
+
+        td {
+            font-size: 14px;
+            padding: 10px;
+        }
+        .promises {
+            display: inline-flex;
+            gap: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome To JavaScript</h1>
+    <h2>16 October 2024</h2>
+
+    <ul>
+        <div class="promises">
+            <div>
+                <h2>Promises</h2>
+                <li>new Promise()</li>
+                <li>promise.then() block</li>
+                <li>promise.catch() block</li>
+            </div>
+            <div>
+                <h2>Promise states</h2>
+                <li>resolve</li>
+                <li>reject</li>
+                <li>pending</li>
+            </div>
+            <div>
+                <h2>Why promises</h2>
+                <li>Asynchronous task handling</li>
+                <li>Overcome callback hell</li>
+            </div>
+        </div>
+
+        <h2>Async Await</h2>
+        <li>Internally using promises</li>
+        <li>Cant use await without async(Old ES Versions)</li>
+        <li>We can make function async</li>
+        
+
+        <h2>Example</h2>
+        <pre>
+        let func = async () => {
+            let res = await fetch('https://api.github.com/users');  //time consuming task
+            let data = await res.json();    //time consuming task
+            console.log(data);
+        }
+        </pre>
+        <table border="1px">
+            <tr>
+                <td>promise</td>
+                <td>async()</td>
+            </tr>
+            <tr>
+                <td>fetch().then(()=>{}).then(()=>{}).then(()=>{})</td>
+                <td>let demo=async()=>{let response = await fetch();}</td>
+            </tr>
+        </table>
+
+    </ul>
+
+    <div id="img">
+
+    </div>
+    <script src="demo.js"></script>
+</body>
+
+</html>
