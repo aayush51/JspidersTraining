@@ -1,0 +1,85 @@
+.active {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    border: 5px solid greenyellow;
+}
+
+.border {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    border: 5px solid navy;
+}
+
+.highlight {
+    color: aquamarine;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* {
+    font-family: monospace;
+}
+
+h2 {
+    font-size: 22px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+li {
+    font-size: 16px;
+    margin: 10px auto;
+}
+
+pre {
+    font-size: 16px;
+    margin: 0px;
+}
