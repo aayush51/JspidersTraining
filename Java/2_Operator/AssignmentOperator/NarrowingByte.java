@@ -1,4 +1,4 @@
-class NarrowingByte 
+public class NarrowingByte 
 {
     public static void main(String[] args) 
     {
