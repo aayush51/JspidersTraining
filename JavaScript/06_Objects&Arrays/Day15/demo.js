@@ -71,6 +71,7 @@ console.log(stud1, stud2, stud3);
 
 
 
+
 //Arrays
 // arrays are dynamically typed (can be changed or add values during runtime)(can store any data)
 // index starts from 0 ends at arr.length - 1
