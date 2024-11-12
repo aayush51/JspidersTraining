@@ -9,10 +9,10 @@
 <body>
 
 	<h1>Register</h1>
-	<form action="reg">
-		Username: <input type="text" name="un"> <br>
+	<form action="user">
+		ID: <input type="text" name="id"> <br>
 		Phone: <input type="text" name="ph"> <br>
-		Email: <input type="text" name="em"> <br>
+		Name: <input type="text" name="nm"> <br>
 		<input type="submit" value="Register">
 	</form>
 
